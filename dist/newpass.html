@@ -12,7 +12,7 @@
 
         <!-- LEFT SIDE IMAGE -->
         <div class="flex h-screen w-full items-center justify-center pl-40">
-            <img src="../Images/forgetpass.png" alt="">
+            <img src="../Images/newpass.png" alt="">
         </div>
 
         <!-- RIGHT SIDE LOGIN FORM -->
@@ -30,12 +30,15 @@
                     <label>Confirm Password</label>
                     <input type="password" name="password" id="password" placeholder="••••••••" class="rounded-lg bg-gray-50 border border-gray-300 mt-2 p-2 focus:border-blue-500 focus:bg-slate-100 focus:ring-primary-600 dark:border-gray-600" required  = "">
                 </div>
-
-                <button class="font-semibold rounded-lg text-sm text-center w-36 my-5 py-2 text-white bg-sky-950 hover:bg-blue-800 hover:text-white">
-                    Save
-                </button>
-
-                <p class="text-sm pt-10"><a href="login.html">Back to Login</a></p>
+                <div class="space-y-2 md:space-y-0 md:space-x-2 pt-4">
+                    <button type="reset" class="w-44 py-2.5 px-4 font-semibold border border-gray-200 text-gray-600 text-sm rounded-lg hover:text-gray-900 hover:border-gray-400">
+                        <a href="verify.html">Back</a>
+                    </button>
+                   
+                    <button class="w-44 font-semibold rounded-lg text-sm text-center my-5 py-2.5 text-white bg-sky-950 hover:bg-blue-800 hover:text-white">
+                       <a href="login.html">Save</a> 
+                    </button>
+                </div>
             </form>
         </div>
     </div>  
