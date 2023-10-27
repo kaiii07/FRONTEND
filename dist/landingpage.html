@@ -18,9 +18,8 @@
             <!-- Container for content alignment -->
                 <div class="mx-auto flex justify-between items-center">
                     <!-- Logo -->
-                    <span class="pl-3 text-lg font-mono">
-                        Foxes
-                    </span>
+                    <a href="landingpage.html"><span class="pl-3 text-lg font-mono">Foxes</span></a>
+                    
 
                     <!-- Menu icon -->
                     <span class="text-3xl cursor-pointer md:hidden block ">
@@ -56,9 +55,21 @@
                                 </div>
                 
                                 <div id="dropdown" class="rounded border border-gray-400 bg-white p-3 absolute top-12 w-44 shadow-md hidden">
-                                    <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2"><ion-icon size="large" name="person-circle-outline"></ion-icon>Profile</div>
-                                    <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2 py-2"><ion-icon size="large" name="settings-outline"></ion-icon>Settings</div>
-                                    <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2"><ion-icon size="large" name="log-out-outline"></ion-icon>Sign out</div>
+                                    <div class="cursor-pointer hover:bg-gray-100 ">
+                                        <a href="profile.html" class="flex items-center gap-2">
+                                            <ion-icon size="large" name="person-circle-outline"></ion-icon>Profile
+                                        </a>
+                                    </div>
+                                    <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2 py-2">
+                                        <a href="settings.html" class="flex items-center gap-2">
+                                            <ion-icon size="large" name="settings-outline"></ion-icon>Settings
+                                        </a>
+                                    </div>
+                                    <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2">
+                                        <a href="sign-out.html" class="flex items-center gap-2">
+                                            <ion-icon size="large" name="log-out-outline"></ion-icon>Sign out
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +92,7 @@
             </div>
 
             <!-- CONTAINER FOR FYP -->
-            <div class="lg:flex flex">
+            <div class="lg:flex flex pt-2">
                 <!-- Post Cards -->
                 <div class="lg:w-3/4">
                     <div class="flex items-center justify-between bg-white p-4 rounded shadow-md mb-4">
