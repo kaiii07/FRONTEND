@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>profile</title>
     <link rel="stylesheet" href="style.css">
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -11,261 +11,88 @@
 
 </head>
 <body class="bg-indigo-100">
-    
-    <!-- HEADER SECTION -->
-        <nav class="bg-white p-2 shadow md:flex md:items-center md:justify-center fixed top-0 left-0 w-full z-10">
 
-            <!-- Container for content alignment -->
-                <div class="mx-auto flex justify-between items-center">
-                    <!-- Logo -->
-                    <a href="landingpage.html"><span class="pl-3 text-lg font-mono">Foxes</span></a>
+    <header class="bg-white fixed top-0 left-0 w-full z-10">
+        <nav class="flex justify-between items-center w-[90%] mx-auto">
+            <!-- FOR LOGO -->
+            <div class="flex justify-between items-center">
+                <a href="landingpage.html">
+                    <img class="w-14" src="../Images/logo.png" alt="">
+                </a>
+            </div>
 
-                    <!-- Menu icon -->
-                    <span class="text-3xl cursor-pointer md:hidden block ">
-                        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-                    </span>
+            <div class="nav md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white px-5 left-0 w-full md:w-auto md:py-0 py-0 top-16 md:pl-0 pl-7 md:opacity-100 opacity-0 transition-all ease-in duration-500">
+                <ul class="sm:flex items-center">
+                    <li class="mx-4 my-6 md:my-0">
+                        <a class="hover:text-cyan-500" href="#">Forum</a>
+                    </li>
+                    <li class="mx-4 my-6 md:my-0">
+                        <a class="hover:text-cyan-500" href="#">Community</a>
+                    </li>
+                    <li class="mx-4 my-6 md:my-0">
+                        <a class="hover:text-cyan-500" href="#">Groups</a>
+                    </li>
+                </ul>
+                <!-- SEARCH BAR -->
+                <div class="my-6 md:my-0 relative pl-10">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-16 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"  fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <input type="search" id="default-search" class="block w-80 p-3 pl-12 text-sm rounded-full text-gray-900 border border-gray-300 bg-gray-50 dark:placeholder-gray-400 dark:text-white" placeholder="Search..." required>
+                </div> 
                 </div>
-
-            <!-- Desktop Menu (Hidden on smaller screens) -->
-                <ul class="mx-auto md:flex md:items-center bg-white z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-                    <div class="hidden sm:flex items-center space-x-4">
-                        
-                        <a href="#" class="hover:text-cyan-500 duration-500">Forum</a>
-                        <a href="#" class="hover:text-cyan-500 duration-500">Community</a>
-
-                        <div class="relative pl-12 ">
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-16 pointer-events-none">
-                                <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"  fill="none" viewBox="0 0 20 20">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                                </svg>
-                            </div>
-                            <input type="search" id="default-search" class="block w-96 p-3 pl-10 text-sm rounded-full text-gray-900 border border-gray-300 bg-gray-50 dark:placeholder-gray-400 dark:text-white" placeholder="Search..." required>
-                        </div> 
-                        
-                        <a href="#" class="hover:text-cyan-500 duration-500"><ion-icon class="pt-2" size="small" name="notifications"></ion-icon></a>
-                        <a href="#" class="hover:text-cyan-500 duration-500"><ion-icon class="pt-2" size="small" name="mail"></ion-icon></a>
         
-                        <div class="select-none">
-                            <div class="relative pl-3" id="dropdownButton">
-                                <div onclick="toggleDropdown()" class=" pr-2 py-2 rounded cursor-pointer font-bold flex items-center gap-4 w-44">
-                                    <img class="rounded-full h-8 w-8" src="../Images/kai.jpg" alt="">
-                                        imnotkey
-                                    <ion-icon class="pt-1" name="chevron-down-outline"></ion-icon>
-                                </div>
-                
-                                <div id="dropdown" class="rounded border border-gray-400 bg-white p-3 absolute top-12 w-44 shadow-md hidden">
-                                    <div class="cursor-pointer hover:bg-gray-100 ">
-                                        <a href="profile.html" class="flex items-center gap-2">
-                                            <ion-icon size="large" name="person-circle-outline"></ion-icon>Profile
-                                        </a>
-                                    </div>
-                                    <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2 py-2">
-                                        <a href="settings.html" class="flex items-center gap-2">
-                                            <ion-icon size="large" name="settings-outline"></ion-icon>Settings
-                                        </a>
-                                    </div>
-                                    <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2">
-                                        <a href="sign-out.html" class="flex items-center gap-2">
-                                            <ion-icon size="large" name="log-out-outline"></ion-icon>Sign out
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+
+            <!-- ICON FOR MSG & NOTIF -->
+            <div class="flex items-center gap-4">
+                <button>
+                    <ion-icon class="text-2xl"  name="notifications"></ion-icon>
+                </button>
+                <button>
+                    <ion-icon class="text-2xl" name="mail"></ion-icon>
+                </button>
+               
+
+                <div class="select-none">
+                    <div class="relative ml-3" id="dropdownButton">
+                        <div onclick="toggleDropdown()" >
+                            <button class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none ">
+                                <img class="h-8 w-8 rounded-full" src="../Images/kai.jpg" alt="">
+                            </button>
                         </div>
         
+                        <div id="dropdown" class="absolute right-0 z-10 mt-2 w-44 p-3 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu">
+                            <div class="cursor-pointer hover:bg-gray-100 ">
+                                <a href="profile.html" class="flex items-center gap-2">
+                                    <ion-icon class="text-3xl" name="person-circle-outline"></ion-icon>Profile
+                                </a>
+                            </div>
+                            <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2 py-2">
+                                <a href="settings.html" class="flex items-center gap-2">
+                                    <ion-icon class="text-3xl" name="settings-outline"></ion-icon>Settings
+                                </a>
+                            </div>
+                            <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2">
+                                <a href="sign-out.html" class="flex items-center gap-2">
+                                    <ion-icon class="text-3xl" name="log-out-outline"></ion-icon>Sign out
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </ul>     
+                </div>
+
+                            <div class="mx-auto flex items-center">
+                                <span class="text-3xl cursor-pointer md:hidden mx-2 block">
+                                    <ion-icon onclick="Menu(this)" name="menu"></ion-icon>
+                                </span>
+                            </div>
+            </div>
+
         </nav>
-
-    <!-- PROFILE SECTION -->
-    <div class="h-full bg-gray-200 p-20 mx-auto">
-        <div class="bg-white rounded-lg shadow-xl pb-8">
-            <div class="w-full h-[250px]">
-                <img src="../Images/header.jpg" class="w-full h-full rounded-tl-lg rounded-tr-lg">
-            </div>
-
-            <div class="flex flex-col items-start pl-10 -mt-28">
-                <img src="../Images/kai.jpg" class="w-40 border-4 border-white rounded-full">
-            </div>
-
-            <div class="flex flex-col items-start pl-10 -mt-24">                 
-                <div class="flex items-center space-x-2 mt-2 pl-44">
-                    <p class="text-2xl font-semibold">imnotkey</p>
-                </div>
-            </div>
-            <div class=" text-lg text-gray-900 pt-6 pl-52"> 
-                <p><a href="">following</a></p>
-                <p><a href="">follower</a></p>
-            </div>
-            
-                <div class="flex justify-center items-center text-lg space-x-44 mt-3 px-8">
-                    <span> 
-                        post
-                    </span>
-                    <span>
-                        about
-                    </span>
-                    <button class="bg-sky-950 hover:bg-sky-900 text-gray-100 px-4 py-2 rounded text-sm space-x-2 transition duration-100">
-                        <span>edit profile</span>
-                    </button>
-                </div>
-            
-        </div>
-        
-        <!-- PROFILE FYP -->
-        <div class="mx-auto mt-7 items-center justify-between gap-3">
-            <div class="lg:flex flex">
-                <!-- Left Column -->
-                <div class="lg:w-80 pr-5">
-                    <div class="bg-white p-4 rounded shadow-md">
-                        <h4 class="text-xl text-gray-900 font-bold">Personal Info</h4>
-                    <ul class="mt-2 text-gray-700">
-                        <li class="flex border-y py-2">
-                            <span class="font-bold w-24">Name:</span>
-                            <span class="text-gray-700">Ky Davi</span>
-                        </li>
-                        <li class="flex border-b py-2">
-                            <span class="font-bold w-24">Section:</span>
-                            <span class="text-gray-700">BSCS 3A</span>
-                        </li>
-                        <li class="flex border-b py-2">
-                            <span class="font-bold w-24">Birthday:</span>
-                            <span class="text-gray-700">Secret, sino kaba</span>
-                        </li>
-                        <li class="flex border-b py-2">
-                            <span class="font-bold w-24">Joined:</span>
-                            <span class="text-gray-700">idk when</span>
-                        </li>                           
-                        </li>
-                    </ul>
-                    </div>
-                </div> 
-
-                <!-- Post Cards -->
-                    <div class="lg:w-2/4">
-                        <div class="flex items-center justify-between bg-white p-4 rounded shadow-md mb-4">
-                            <img class="rounded-full h-10 w-10" src="../Images/kai.jpg" alt="">
-                            <p class="text-gray-500 items-start"> </p> <!-- Share your thoughts.. di q pa maayos positon-->
-                            <ion-icon class="bg-sky-950 text-white rounded-lg p-3" name="add"></ion-icon>
-                        </div>
-                    
-                    <!-- Posted Cards -->
-                        <div class="bg-white p-4 rounded shadow-md mb-4">
-                            <div class="flex items-start px-2 py-2">
-                                <img class="w-12 h-12 rounded-full object-cover mr-4 shadow" src="../Images/kai.jpg" alt="avatar">
-                                <div class="">
-                                    <div class="flex items-center gap-2">
-                                        <h2 class="text-lg font-semibold text-gray-900 -mt-1">imnotkey </h2>
-                                        <small class="text-sm text-gray-700">22h ago</small>
-                                    </div>
-                                    <p class="text-gray-700 text-sm">Joined 12 SEP 2012. </p>
-                                    <p class="mt-3 text-gray-700 text-sm">If it works, don't touch it!</p>
-                    
-                                <!-- icons for hearts and comments-->
-                                    <div class="mt-4 flex items-center justify-between">
-                                        <div class="flex items-center justify-between text-slate-500">
-                                            <div class="flex space-x-4 md:space-x-8">
-                                                <div class="flex cursor-pointer items-center transition hover:text-slate-600">
-                                                    <svg fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-1" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                            d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-                                                    </svg>
-                                                    <span>125</span>
-                                                </div>
-                    
-                                                <div class="flex cursor-pointer items-center transition hover:text-slate-600">
-                                                    <svg fill="none" viewBox="0 0 24 24" class="w-4 h-4 mr-1" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                                    </svg>
-                                                    <span>4</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                <!-- Right Column -->
-                    <div class="">
-                        <div class="lg:w-80 pl-5">
-                            <div class="bg-white p-4 rounded shadow-md">
-                                
-                                <div class="flex items-center gap-2">
-                                    <ion-icon class="bg-purple-600 text-white rounded-full p-2" name="megaphone-outline"></ion-icon>
-                                    <span class="font-semibold">Announcement</span>
-                                </div>
-            
-                                <ul class="space-y-2">
-                                    <li><a href="#" class="text-blue-500">Lorem ipsum dolor sit amet</a></li>
-                                    <li><a href="#" class="text-blue-500">Lorem ipsum dolor sit amet</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <br>
-    
-                        <div class="pl-5 ">
-                            <div class="bg-white p-4 rounded shadow-md">
-                                
-                                <div class="flex items-center gap-2">
-                                    <ion-icon class="bg-red-600 text-white rounded-full p-2" name="flame-outline"></ion-icon>
-                                    <span class="font-semibold">Upcoming Events</span>
-                                </div>
-            
-                                <ul class="space-y-2">
-                                    <li><a href="#" class="text-blue-500">Lorem ipsum dolor sit amet</a></li>
-                                    <li><a href="#" class="text-blue-500">Lorem ipsum dolor sit amet</a></li>
-                                </ul>
-                            </div>
-                        </div> 
-    
-                    </div>
-    
-                </div> 
-            </div>       
-            
-
-    <script>
-
-            const DATA_SET_VERTICAL_BAR_CHART_1 = [68.106, 26.762, 94.255, 72.021, 74.082, 64.923, 85.565, 32.432, 54.664, 87.654, 43.013, 91.443];
-
-            const labels_vertical_bar_chart = ['January', 'February', 'Mart', 'April', 'May', 'Jun', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-            const dataVerticalBarChart= {
-                labels: labels_vertical_bar_chart,
-                datasets: [
-                    {
-                        label: 'Revenue',
-                        data: DATA_SET_VERTICAL_BAR_CHART_1,
-                        borderColor: 'rgb(54, 162, 235)',
-                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                    }
-                ]
-            };
-            const configVerticalBarChart = {
-                type: 'bar',
-                data: dataVerticalBarChart,
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        title: {
-                            display: true,
-                            text: 'Last 12 Months'
-                        }
-                    }
-                },
-            };
-
-            var verticalBarChart = new Chart(
-                document.getElementById('verticalBarChart'),
-                configVerticalBarChart
-            );
-        </script>
+    </header>
 
     <script>
         function toggleDropdown(){
@@ -276,9 +103,10 @@
 
     <script>
         function Menu(e){
-            let list = document.querySelector('ul');
-            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[50px]'), list.classList.add('opacity-100')) :(e.name = "menu", list.classList.remove('top-80px'), list.classList.remove('opacity-100'))
+            let list = document.querySelector('.nav');
+            e.name === 'menu' ? (e.name = "close", list.classList.add ('top-[100px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
         }
     </script>
+
 </body>
 </html>

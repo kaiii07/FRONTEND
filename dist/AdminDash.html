@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="style.css">
-
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -13,74 +12,101 @@
 </head>
 <body class="bg-indigo-100">
 
-    <!-- HEADER SECTION -->
-    <nav class="p-2 bg-white shadow md:flex md:items-center md:justify-between">
-        <div class="mx-auto flex justify-between items-center">
-            <span class="text-2xl font-mono mx-7">
-                Logo
-            </span>
-
-            <span class="text-3xl cursor-pointer md:hidden block ">
-                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-            </span>
-        </div>
-
-        <ul class="mx-auto md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
-            <div class="relative pl-12 pr-60">
-                <div class="absolute inset-y-0 left-0 flex items-center pl-16 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"  fill="none" viewBox="0 0 20 20">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                    </svg>
-                </div>
-                <input type="search" id="default-search" class="block w-96 p-3 pl-10 text-sm rounded-full text-gray-900 border border-gray-300 bg-gray-50 dark:placeholder-gray-400 dark:text-white" placeholder="Search..." required>
+    <header class="bg-white fixed top-0 left-0 w-full z-10">
+        <nav class="flex justify-between items-center w-[90%] mx-auto">
+            <!-- FOR LOGO -->
+            <div class="flex justify-between items-center">
+                <a href="landingpage.html">
+                    <img class="w-14" src="../Images/logo.png" alt="">
+                </a>
             </div>
 
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="hover:text-cyan-500 duration-500">Forum</a>
-            </li>
-            <li class="mx-4 my-6 md:my-0">
-                <a href="#" class="hover:text-cyan-500 duration-500">Community</a>
-            </li>
-            
-
-            <li class="mx-2 my-6 md:my-0">
-                <ion-icon size="large" name="notifications"></ion-icon>
-            </li>
-            <li class="mx-2 my-6 md:my-0">
-                <ion-icon size="large" name="mail"></ion-icon>
-            </li>
-            
-            <div class="select-none">
-                <div class="relative pl-3" id="dropdownButton">
-                    <div onclick="toggleDropdown()" class=" pr-2 py-2 rounded cursor-pointer font-bold flex items-center gap-4 w-44">
-                        <img class="rounded-full h-8 w-8" src="../Images/kai.jpg" alt="">
-                            imnotkey
-                        <ion-icon class="pt-1" name="chevron-down-outline"></ion-icon>
+            <div class="nav md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white px-5 left-0 w-full md:w-auto md:py-0 py-0 top-16 md:pl-0 pl-7 md:opacity-100 opacity-0 transition-all ease-in duration-500">
+                <ul class="sm:flex items-center">
+                    <li class="mx-4 my-6 md:my-0">
+                        <a class="hover:text-cyan-500" href="#">Forum</a>
+                    </li>
+                    <li class="mx-4 my-6 md:my-0">
+                        <a class="hover:text-cyan-500" href="#">Community</a>
+                    </li>
+                    <li class="mx-4 my-6 md:my-0">
+                        <a class="hover:text-cyan-500" href="#">Groups</a>
+                    </li>
+                </ul>
+                <!-- SEARCH BAR -->
+                <div class="my-6 md:my-0 relative pl-10">
+                    <div class="absolute inset-y-0 left-0 flex items-center pl-16 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"  fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
                     </div>
-    
-                    <div id="dropdown" class="rounded border border-gray-400 bg-white p-3 absolute top-12 w-44 shadow-md hidden">
-                        <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2"><ion-icon size="large" name="person-circle-outline"></ion-icon>Profile</div>
-                        <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2 py-2"><ion-icon size="large" name="settings-outline"></ion-icon>Settings</div>
-                        <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2"><ion-icon size="large" name="log-out-outline"></ion-icon>Sign out</div>
+                    <input type="search" id="default-search" class="block w-80 p-3 pl-12 text-sm rounded-full text-gray-900 border border-gray-300 bg-gray-50 dark:placeholder-gray-400 dark:text-white" placeholder="Search..." required>
+                </div> 
+                </div>
+        
+            </div>
+
+            <!-- ICON FOR MSG & NOTIF -->
+            <div class="flex items-center gap-4">
+                <button>
+                    <ion-icon class="text-2xl"  name="notifications"></ion-icon>
+                </button>
+                <button>
+                    <ion-icon class="text-2xl" name="mail"></ion-icon>
+                </button>
+               
+
+                <div class="select-none">
+                    <div class="relative ml-3" id="dropdownButton">
+                        <div onclick="toggleDropdown()" >
+                            <button class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none ">
+                                <img class="h-8 w-8 rounded-full" src="../Images/kai.jpg" alt="">
+                            </button>
+                        </div>
+        
+                        <div id="dropdown" class="absolute right-0 z-10 mt-2 w-44 p-3 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none hidden" role="menu">
+                            <div class="cursor-pointer hover:bg-gray-100 ">
+                                <a href="profile.html" class="flex items-center gap-2">
+                                    <ion-icon class="text-3xl" name="person-circle-outline"></ion-icon>Profile
+                                </a>
+                            </div>
+                            <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2 py-2">
+                                <a href="settings.html" class="flex items-center gap-2">
+                                    <ion-icon class="text-3xl" name="settings-outline"></ion-icon>Settings
+                                </a>
+                            </div>
+                            <div class="cursor-pointer hover:bg-gray-100 flex items-center gap-2">
+                                <a href="sign-out.html" class="flex items-center gap-2">
+                                    <ion-icon class="text-3xl" name="log-out-outline"></ion-icon>Sign out
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                            <div class="mx-auto flex items-center">
+                                <span class="text-3xl cursor-pointer md:hidden mx-2 block">
+                                    <ion-icon onclick="Menu(this)" name="menu"></ion-icon>
+                                </span>
+                            </div>
             </div>
-           
-        </ul>
-    </nav>
+
+        </nav>
+    </header>
 
     <script>
         function toggleDropdown(){
             let dropdown = document.querySelector('#dropdownButton #dropdown');
             dropdown.classList.toggle("hidden");
         }
-    </script>
+    </script> 
 
     <script>
         function Menu(e){
-            let list = document.querySelector('ul');
-            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[50px]'), list.classList.add('opacity-100')) :(e.name = "menu", list.classList.remove('top-80px'), list.classList.remove('opacity-100'))
+            let list = document.querySelector('.nav');
+            e.name === 'menu' ? (e.name = "close", list.classList.add ('top-[100px]'), list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'))
         }
     </script>
+
 </body>
 </html>
