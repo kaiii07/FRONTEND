@@ -4,7 +4,7 @@ live server type in terminal: npm run dev
     REGISTER - Join the Fox-clusive Student Forum: Where Curiosity Meets Cunning!
 
 
-Accomplishment 
+Accomplishment
     10/16/2023
     - designed for the initial design of the login page.
     10/22/2023
@@ -20,7 +20,10 @@ Accomplishment
     - codes for landing and profile pages that are not done yet, I just try to code my plan for the landing page and still trying to figure out how the grids work dahil litong lito q dyan. 
 
     10/30/2023
-    - I tried to fix the responsive header and finally it was okay I think but still working on it.
+    - tried to fix the responsive header and finally it was okay I think but still working on it.
+
+    10/31/2023
+    - currently focused on enhancing the design of the profile page and I've taken steps to improve its responsiveness.
 
 
 
