@@ -4,6 +4,10 @@ live server type in terminal: npm run dev
     REGISTER - Join the Fox-clusive Student Forum: Where Curiosity Meets Cunning!
 
 
+
+
+
+
 Accomplishment
     10/16/2023
     - designed for the initial design of the login page.
