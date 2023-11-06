@@ -12,7 +12,10 @@
 </head>
 <body class="bg-indigo-100">
 
-    <!--HEADER/NAVBAR-->
+    <!-- SIDE BAR -->
+    
+
+    <!-- HEADER/NAVBAR -->
     <header class="bg-white fixed top-0 left-0 w-full z-10">
         <nav class="flex justify-between items-center w-[90%] mx-auto">
             <!-- FOR LOGO -->
@@ -22,7 +25,7 @@
                 </a>
             </div>
 
-            <div class="nav md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white px-5 left-0 w-full md:w-auto md:py-0 py-0 top-2/3 md:pl-0 pl-5 md:opacity-100 opacity-0 transition-all ease-in duration-500">
+            <div class="nav md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white px-5 left-0 w-full md:w-auto md:py-0 py-0 top-9 md:pl-0 pl-5 md:opacity-100 opacity-0 transition-all ease-in duration-500">
                 <ul class="sm:flex items-center">
                     <li class="mx-4 my-8 md:my-0">
                         <a class="hover:text-cyan-500" href="#">Forum</a>
@@ -93,10 +96,10 @@
             </div>
         </nav>
     </header>
-    
-    <!-- POSTED FORM WITH COMMENT -->
+
+    <!-- POST FORM -->
     <section class="items-center justify-center">
-        <div class=" bg-white rounded-lg mb-6 p-4 mx-5 md:mx-auto mt-20 max-w-md md:max-w-xl "><!--horizantil margin is just for display-->
+        <div class=" bg-white rounded-lg mb-6 p-4 mx-5 md:mx-auto mt-20 max-w-md md:max-w-xl ">
             <textarea name="message" placeholder="Share your thoughts..." class="w-full rounded-lg p-2 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400"></textarea>
                 <footer class="flex justify-between mt-2">
                     <div class="flex gap-2">
@@ -115,156 +118,231 @@
 
         <!-- POSTED WITH COMMENT -->
         <div class=" bg-white rounded-lg mb-6 p-4 mx-5 md:mx-auto mt-5 max-w-md md:max-w-xl ">
-                <div class="flex flex-row px-2 py-3 mx-3">
-                    <div class="w-auto h-auto rounded-full">
-                        <img class="w-12 h-12 object-cover rounded-full shadow cursor-pointer" alt="User avatar" src="../Images/lilo2.jpg">
-                    </div>
-                    <div class="flex flex-row items-center mb-2 ml-4 mt-1">
-                        <div class="text-gray-600 text-sm font-semibold">Lilobeeeeear 
-                            <span class="text-gray-400 font-thin text-xs">
-                                • 30 seconds ago
-                            </span>
-                        </div>
-                        <div class="text-gray-500 cursor-pointer pl-60">
-                            <!-- Three-dot menu icon -->
-                            <button class="flex items-center justify-center hover:bg-gray-50 rounded-full p-1">
-                                <div class="flex space-x-0.5">
+            <div class="flex w-full items-center justify-between pb-3 px-2 py-1">
+                <div class="flex items-center space-x-3">
+                    <img class="h-10 w-10 rounded-full bg-slate-400" src="../Images/lilo1.jpg" alt="">
+                 
+                  <div class="flex flex-col">
+					<div class="text-gray-600 text-sm font-semibold">Lilobeeeeear</div>
+					<div class="text-gray-400 font-thin text-xs">• 2 mins ago</div>
+				</div>
+                </div>
+
+            <!-- Three-dot menu icon -->
+                <div class="flex items-center space-x-8 pb-6">
+                    <div class="text-xs text-neutral-500">
+                        <div class="text-gray-500 cursor-pointer">
+                            <div class="flex space-x-0.5">
+                                <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
                                     <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
                                     <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
-                                    <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
-                                </div>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- for caption -->
+                <div class="text-gray-800 text-sm mb-6 mx-3 px-2">if it works, don't touch it!</div>
 
-                <!-- FOR CAPTION -->
-                <div class="text-gray-500 text-sm mb-6 mx-3 px-2">if it works, don't touch it!</div>
+            <!-- comment, like, and share... -->
+                <div class="flex justify-between items-center px-11 pb-3">
+                    <button class="flex items-center">
+                        <ion-icon class="h-4 w-4 text-red-500 items-center" name="heart-outline"></ion-icon>
+                        <span class="text-gray-600 text-sm pl-2">Like</span>
+                    </button>
+                    <button class="flex items-center show-modal">
+                        <ion-icon class="h-4 w-4 text-blue-500 items-center" name="chatbubbles-outline"></ion-icon>
+                         <span class="text-gray-600 text-sm pl-2">Comment</span>
+                    </button>
+                    <button class="flex items-center">
+                        <ion-icon class="h-4 w-4 text-blue-500 items-center" name="share-social-outline"></ion-icon>
+                        <span class="text-gray-600 text-sm pl-2">Share</span>
+                        </button>
+                    </div>
 
-                <!-- COMMENTS AND LIKES... -->
-                    <div class="flex justify-between items-center px-11 pb-3">
-                            <button class="flex items-center">
-                                <ion-icon class="h-4 w-4 text-red-500 items-center" name="heart-outline"></ion-icon>
-                                <span class="text-gray-600 text-sm pl-2">Like</span>
-                            </button>
-                            <button class="flex items-center show-modal">
-                                <ion-icon class="h-4 w-4 text-blue-500 items-center" name="chatbubbles-outline"></ion-icon>
-                                 <span class="text-gray-600 text-sm pl-2">Comment</span>
-                            </button>
-                            <button class="flex items-center">
-                                <ion-icon class="h-4 w-4 text-blue-500 items-center" name="share-social-outline"></ion-icon>
-                                <span class="text-gray-600 text-sm pl-2">Share</span>
-                            </button>
-                    </div>
-                    
-                    
-                    <div class="flex w-full border-t border-gray-100"></div>
-                    <div class="mt-2 mx-5 flex flex-row justify-start text-xs">
-                        <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Likes: <div class="ml-1 text-gray-400 text-ms"> 30</div></div>
-                        <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Comments:<div class="ml-1 text-gray-400 text-ms"> 10</div></div>
-                    </div>
+            <!-- counts of likes and comments -->  
+                <div class="flex w-full border-t border-gray-100"></div>
+                <div class="mt-2 mx-5 flex flex-row justify-start text-xs">
+                    <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Likes: <div class="ml-1 text-gray-400 text-ms"> 30</div></div>
+                    <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Comments:<div class="ml-1 text-gray-400 text-ms"> 10</div></div>
+                </div>
+
+            <!-- comment section -->
+            <div class="flex items-center space-x-2 pl-5">
+                <div class="group relative flex flex-shrink-0 self-start cursor-pointer">
+                    <img src="../Images/kai.jpg" alt="" class="h-8 w-8 object-fill rounded-full">
+                </div>
     
+                <div class="flex items-center justify-center space-x-2">
+                    <div class="block">
+                        <div class="flex justify-center items-center space-x-2">
+                            <div class="bg-gray-100 w-auto rounded-xl px-2 pb-2 lg:-ml-9 sm:-ml-9">
+                                <div class="font-medium">
+                                    <a href="#" class="hover:underline text-sm">
+                                    <small>Ganendra</small>
+                                    </a>
+                                </div>
+                                <div class="text-xs">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, maiores!
+                                </div>
+                            </div>   
+                        </div>
+    
+                        <div class="flex justify-start items-center text-xs w-full">
+                            <div class="font-semibold text-gray-700 px-2 flex items-center justify-center space-x-1">
+                                    <a href="#" class="hover:underline">
+                                        <small>Like</small>
+                                    </a>
+                                        <small class="self-center">.</small>
+                                    <a href="#" class="hover:underline">
+                                        <small>Reply</small>
+                                    </a>
+                                        <small class="self-center">.</small>
+                                    <a href="#" class="hover:underline">
+                                    <small>15 hour</small>
+                                    </a>
+                            </div>
+                        </div>
+    
+                        <!-- Subcomment Sample -->
+                        <div class="flex items-center space-x-2 space-y-2">
+                            <div class="group relative flex flex-shrink-0 self-start cursor-pointer pt-2">
+                                <img src="../Images/kai.jpg" alt="" class="h-8 w-8 object-fill rounded-full">
+                            </div>
+    
+                            <div class="flex items-center justify-center space-x-2">
+                                <div class="block">
+                                    <div class="bg-gray-100 w-auto rounded-xl px-2 pb-2">
+                                        <div class="font-medium">
+                                            <a href="#" class="hover:underline text-sm">
+                                                <small>Hasan Muhammad</small>
+                                            </a>
+                                        </div>
+                                        <div class="text-xs">
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, maiores!
+                                        </div>
+                                    </div>
+    
+                                    <div class="flex justify-start items-center text-xs w-full">
+                                        <div class="font-semibold text-gray-700 px-2 flex items-center justify-center space-x-1">
+                                            <a href="#" class="hover:underline">
+                                                <small>Like</small>
+                                            </a>
+                                                <small class="self-center">.</small>
+                                            <a href="#" class="hover:underline">
+                                                <small>Reply</small>
+                                            </a>
+                                            <small class="self-center">.</small>
+                                            <a href="#" class="hover:underline">
+                                                <small>15 hour</small>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                        <!-- New Subcomment Paste Here !! -->
+                        
+                    </div>
+                </div>
+    
+            </div>
+                
+
+            <!-- view more comments-->
                 <div class="flex justify-end items-end pr-5 -top-10 text-xs text-gray-500">
                     <button class="show-modal">View more comments</button>
-                  
                 </div>
 
                 <div class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400">
-                    <img class="w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer" alt="User avatar" src="../Images/lilo2.jpg">
-                    
+                    <img class="w-8 h-8 object-cover rounded-full shadow mr-2 cursor-pointer" alt="User avatar" src="../Images/lilo2.jpg">    
                     <span class="absolute inset-y-0 right-0 flex items-center pr-6">
                         <button type="submit" class="p-1 focus:outline-none focus:shadow-none hover:text-blue-500">
-                        <svg class="w-6 h-6 transition ease-out duration-300 hover:text-blue-500 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-    
+                            <svg class="w-6 h-6 transition ease-out duration-300 hover:text-blue-500 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
                         </button>
                     </span>
                         <input type="search" class="w-full py-2 pl-4 pr-10 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400" style="border-radius: 25px" placeholder="Post a comment..." autocomplete="off">
                 </div>
             </div>
+            
 
-
-        <!-- POSTED WITHOUT COMMENT -->
-        <div class=" bg-white shadow-lg rounded-lg mb-6 p-4 mx-5 md:mx-auto mt-5 max-w-md md:max-w-xl ">
-                <div class="flex flex-row px-2 py-3 mx-3">
-                    <div class="w-auto h-auto rounded-full">
-                        <img class="w-12 h-12 object-cover rounded-full shadow cursor-pointer" alt="User avatar" src="../Images/lilo2.jpg">
+        <!-- POSTED WITH COMMENT -->
+            <div class=" bg-white rounded-lg mb-6 p-4 mx-5 md:mx-auto mt-5 max-w-md md:max-w-xl ">
+                <div class="flex w-full items-center justify-between pb-3 px-2 py-1">
+                    <div class="flex items-center space-x-3">
+                        <img class="h-10 w-10 rounded-full bg-slate-400" src="../Images/lilo1.jpg" alt="">
+                    
+                    <div class="flex flex-col">
+                        <div class="text-gray-600 text-sm font-semibold">Lilobeeeeear</div>
+                        <div class="text-gray-400 font-thin text-xs">• 2 mins ago</div>
                     </div>
-                    <div class="flex flex-row items-center mb-2 ml-4 mt-1">
-                        <div class="text-gray-600 text-sm font-semibold">Lilobeeeeear 
-                            <span class="text-gray-400 font-thin text-xs">
-                                • 30 seconds ago
-                            </span>
-                        </div>
-                        <div class="text-gray-500 cursor-pointer pl-60">
-                            <!-- Three-dot menu icon -->
-                            <button class="flex items-center justify-center hover:bg-gray-50 rounded-full p-1">
-                                <div class="flex space-x-0.5">
-                                    <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
-                                    <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
-                                    <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
+                    </div>
+
+                    <!-- Three-dot menu icon -->
+                        <div class="flex items-center space-x-8 pb-6">
+                            <div class="text-xs text-neutral-500">
+                                <div class="text-gray-500 cursor-pointer">
+                                    <button class="flex items-center justify-center hover:bg-gray-50 rounded-full p-1">
+                                        <div class="flex space-x-0.5">
+                                            <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
+                                                <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
+                                                <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
+                                            </div>
+                                    </button>
                                 </div>
+                            </div>
+                        </div>
+                </div>
+                
+                <!-- for caption -->
+                    <div class="text-gray-800 text-sm mb-6 mx-3 px-2">if it works, don't touch it!</div>
+
+                <!-- comment, like, and share... -->
+                    <div class="flex justify-between items-center px-11 pb-3">
+                        <button class="flex items-center">
+                            <ion-icon class="h-4 w-4 text-red-500 items-center" name="heart-outline"></ion-icon>
+                            <span class="text-gray-600 text-sm pl-2">Like</span>
+                        </button>
+                        <button class="flex items-center show-modal">
+                            <ion-icon class="h-4 w-4 text-blue-500 items-center" name="chatbubbles-outline"></ion-icon>
+                            <span class="text-gray-600 text-sm pl-2">Comment</span>
+                        </button>
+                        <button class="flex items-center">
+                            <ion-icon class="h-4 w-4 text-blue-500 items-center" name="share-social-outline"></ion-icon>
+                            <span class="text-gray-600 text-sm pl-2">Share</span>
                             </button>
                         </div>
-                    </div>
-                </div>
 
-                <!-- FOR CAPTION -->
-                <div class="text-gray-500 text-sm mb-6 mx-3 px-2">if it works, don't touch it!</div>
-
-                <!-- COMMENTS AND LIKES -->
-                    <div class="flex justify-between items-center px-11 pb-3">
-                            <button class="flex items-center">
-                                <ion-icon class="h-4 w-4 text-red-500 items-center" name="heart-outline"></ion-icon>
-                                <span class="text-gray-600 text-sm pl-2">Like</span>
-                            </button>
-                            <button class="flex items-center show-modal">
-                                <ion-icon class="h-4 w-4 text-blue-500 items-center" name="chatbubbles-outline"></ion-icon>
-                                 <span class="text-gray-600 text-sm pl-2">Comment</span>
-                            </button>
-                            <button class="flex items-center">
-                                <ion-icon class="h-4 w-4 text-blue-500 items-center" name="share-social-outline"></ion-icon>
-                                <span class="text-gray-600 text-sm pl-2">Share</span>
-                            </button>
-                    </div>
-                       
+                <!-- counts of likes and comments -->  
                     <div class="flex w-full border-t border-gray-100"></div>
                     <div class="mt-2 mx-5 flex flex-row justify-start text-xs">
                         <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Likes: <div class="ml-1 text-gray-400 text-ms"> 30</div></div>
                         <div class="flex text-gray-700 font-normal rounded-md mb-2 mr-4 items-center">Comments:<div class="ml-1 text-gray-400 text-ms"> 10</div></div>
                     </div>
 
-                <!-- COMMENT SECTION -->
-                <div class="text-black p-4 antialiased flex">
-                    <img class="rounded-full h-8 w-8 mr-2" src="../Images/lilo1.jpg">
-                    <div>
-                        <div class="bg-gray-100 rounded-lg px-4 pt-1 pb-2 pl-2">
-                            <div class="font-semibold text-sm leading-relaxed">Lilo</div>
-                            <div class="text-xs leading-snug md:leading-normal">Lorem ipsum dolor sit amet.</div>
-                        </div>
-
+                <!-- view more comments-->
+                    <div class="flex justify-end items-end pr-5 -top-10 text-xs text-gray-500">
+                        <button class="show-modal">View more comments</button>
                     </div>
-                </div>
 
-                <div class="flex justify-end items-end pr-5 -top-10 text-xs text-gray-500">
-                    <a href="#">View more comments</a>
-                </div>
-
-                <div class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400">
-                    <img class="w-10 h-10 object-cover rounded-full shadow mr-2 cursor-pointer" alt="User avatar" src="../Images/lilo2.jpg">
-                    
-                    <span class="absolute inset-y-0 right-0 flex items-center pr-6">
-                        <button type="submit" class="p-1 focus:outline-none focus:shadow-none hover:text-blue-500">
-                        <svg class="w-6 h-6 transition ease-out duration-300 hover:text-blue-500 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-    
-                        </button>
-                    </span>
-                        <input type="search" class="w-full py-2 pl-4 pr-10 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400" style="border-radius: 25px" placeholder="Post a comment..." autocomplete="off">
-                </div>
+                    <div class="relative flex items-center self-center w-full max-w-xl p-4 overflow-hidden text-gray-600 focus-within:text-gray-400">
+                        <img class="w-8 h-8 object-cover rounded-full shadow mr-2 cursor-pointer" alt="User avatar" src="../Images/lilo2.jpg">    
+                        <span class="absolute inset-y-0 right-0 flex items-center pr-6">
+                            <button type="submit" class="p-1 focus:outline-none focus:shadow-none hover:text-blue-500">
+                                <svg class="w-6 h-6 transition ease-out duration-300 hover:text-blue-500 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </button>
+                        </span>
+                            <input type="search" class="w-full py-2 pl-4 pr-10 text-sm bg-gray-100 border border-transparent appearance-none rounded-tg placeholder-gray-400" style="border-radius: 25px" placeholder="Post a comment..." autocomplete="off">
+                    </div>
             </div>
+           
     </section>
 
     <!-- REACT MODAL -->
