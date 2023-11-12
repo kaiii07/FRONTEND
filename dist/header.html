@@ -1,0 +1,116 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>header</title>
+  <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="bg-gray-50">
+
+    <div class="flex flex-col h-screen">
+      <!--  start::navbar   -->
+        <nav class="flex bg-white h-14 w-full items-center justify-between mx-auto px-3 py-2 border-b border-gray-300">
+          <div class="sidebar-header flex items-start justify-start py-3 ml-4">
+              <div class="inline-flex">
+                  <a href="landingpage.html" class="inline-flex flex-row items-center">
+                      <img class="w-10" src="../Images/logo.png" alt="">
+                  </a>
+              </div>   
+              <form action="#" class="sm:pl-16 md:pl-48 mt-1">
+                <div class="hidden md:flex relative">
+                    <input id="search" type="text" name="search" class="text-xs placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-300 w-full h-10 focus:outline-none focus:border-sky-950" placeholder="Search..." />
+                </div>
+
+                <!-- hide search box -->
+                <div class="flex md:hidden">
+                    <a href="#" class="flex items-center justify-center h-10 w-10 border-transparent">
+                        <svg class="h-4 w-4 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </a>
+                </div>
+            </form>         
+          </div>
+
+          <!-- button profile -->
+          <div class="flex items-center justify-center gap-2">
+              <a href="profile.html" class="flex flex-row items-center rounded-full p-1 hover:bg-sky-100">
+                  <img class="h-8 w-8 bg-gray-200 border rounded-full" src="../Images/kai.jpg" alt="">
+                  <span class="flex flex-col ml-2">
+                    <span class="truncate w-20 font-semibold tracking-wide leading-none">imnotky</span>
+                  </span>
+              </a>
+          </div>
+
+        </nav>
+        <!--  end::navbar   -->
+
+        <div class="flex flex-1 overflow-hidden">
+            <!--   start::Sidebar    -->
+            <aside class="hidden sm:block bg-white w-56 overflow-y-auto pt-5">
+                <div class="sidebar-content px-4 pb-6">
+                    <ul class="flex flex-col w-full font-semibold">
+                        <li class="my-px">
+                            <a href="#" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-800 bg-gray-100">
+                                <span class="flex items-center justify-center text-lg text-gray-400">
+                                    <i class="fa-solid fa-house"></i>
+                                </span>
+                                <span class="ml-3">Feed</span>
+                            </a>
+                        </li>
+                        
+                        <li class="my-px">
+                            <a href="#" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-800 hover:bg-gray-100 hover:text-gray-700">
+                                <span class="flex items-center justify-center text-lg text-gray-700">
+                                    <ion-icon name="notifications-outline"></ion-icon>
+                                </span>
+                                <span class="ml-3">Notifications</span>
+                                <span class="flex items-center justify-center text-xs text-red-500 font-semibold bg-red-100 h-6 px-2 rounded-full ml-auto">10</span>
+                            </a>
+                        </li>
+    
+                        <li class="my-px">
+                            <a href="#" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-800 hover:bg-gray-100 hover:text-gray-700">
+                                <span class="flex items-center justify-center text-lg text-gray-700">
+                                    <ion-icon name="settings-outline"></ion-icon>
+                                </span>
+                                <span class="ml-3">Settings</span>
+                            </a>
+                        </li>
+    
+                        <li class="my-px">
+                            <a href="#" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-800 hover:bg-gray-100 hover:text-gray-700">
+                                <span class="flex items-center justify-center text-lg text-gray-700">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </span>
+                                <span class="ml-3">Profile</span>
+                            </a>
+                        </li>
+    
+                        <li class="my-px">
+                            <a href="#" class="flex flex-row items-center h-10 px-3 rounded-lg text-gray-800 hover:bg-gray-100 hover:text-gray-700">
+                                <span class="flex items-center justify-center text-lg text-gray-700">
+                                    <ion-icon name="log-out-outline"></ion-icon>
+                                </span>
+                                <span class="ml-3">Sign out</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </aside>
+            <!--   end::Sidebar    -->
+
+            <!--   start::Main Content     -->
+            <main class="flex flex-1 bg-gray-200 overflow-y-auto paragraph px-5">
+                <!-- content here -->
+            </main>
+        </div>
+    </div>
+
+</body>
+</html>
