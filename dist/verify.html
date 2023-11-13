@@ -5,53 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verification</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2">
-
-        <!-- LEFT SIDE IMAGE -->
-        <div class="flex h-screen w-full items-center justify-center pl-40">
-            <img src="../Images/verify.png" alt="">
-        </div>
-
-        <!-- RIGHT SIDE LOGIN FORM -->
-        <div class="flex flex-col justify-center pl-20">
-            <div class="bg-white rounded-xl border shadow p-4 sm:p-8 mx-4 max-w-sm">
-                <h1 class="font-bold text-2xl text-gray-800 mb-1">Verify your email</h1>
-                <p class="text-sm font-medium text-gray-600">Please enter the code we sent to user@example.com</p>
-                <div class="mt-6">
-
-                  <form action="" method="post">
-                    <div class="flex items-center justify-center gap-4">
-                      <input type="text" placeholder="1" maxlength="1" min="1" minlength="1" max="1" required
-                        class="w-16 h-16 border rounded-lg p-4 text-center mx-auto hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 placeholder:font-medium font-bold text-xl text-blue-900">
-                      <input type="text" placeholder="2" maxlength="1" min="1" minlength="1" max="1" required
-                        class="w-16 h-16 border rounded-lg p-4 text-center mx-auto hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 placeholder:font-medium font-bold text-xl text-blue-900">
-                      <input type="text" placeholder="3" maxlength="1" min="1" minlength="1" max="1" required
-                        class="w-16 h-16 border rounded-lg p-4 text-center mx-auto hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 placeholder:font-medium font-bold text-xl text-blue-900">
-                      <input type="text" placeholder="4" maxlength="1" min="1" minlength="1" max="1" required
-                        class="w-16 h-16 border rounded-lg p-4 text-center mx-auto hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 placeholder:font-medium font-bold text-xl text-blue-900">
+   <!-- Container -->
+		<div class="container mx-auto mt-24">
+			<div class="flex justify-center px-6 my-12">
+				<!-- Row -->
+				<div class="w-full xl:w-3/4 lg:w-11/12 flex">
+					<!-- Col -->
+					<div class="hidden lg:flex w-full lg:w-1/2 justify-around items-center">
+                          <img src="../Images/verify.png" alt="">
                     </div>
-
-                    <div
-                      class="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-2 justify-between mx-auto w-full mt-6 mb-4">
-                      <button type="reset"
-                        class="w-full py-2.5 px-4 font-semibold border border-gray-200 text-gray-600 text-sm rounded-lg hover:text-gray-900 hover:border-gray-400">
-                        <a href="Forgetpass.html">Back</a>
-                      </button>
-                      <button type="submit"
-                        class="w-full py-2.5 bg-sky-900 px-4 font-semibold text-gray-50 text-sm rounded-lg hover:bg-blue-800 hover:text-white">
-                        <a href="newpass.html">Verify</a> 
-                      </button>
-                    </div>
-                    
-                  </form>
-                </div>
-                <small class="text-center block text-xs text-gray-600 font-medium">Didn't get a code? <a href=""
-                    class="underline font-semibold text-gray-900 hover:text-blue-600">Resend code</a></small>
-              </div>
-        </div>
-    </div>  
+					<!-- Col -->
+					<div class="w-full lg:w-1/2 bg-white p-7 mt-10 rounded-lg lg:rounded-l-none">
+						<div class="flex flex-col space-y-2 text-center mb-5">
+                            <h1 class="text-gray-800 font-bold text-3xl">Verify your email</h1>
+                            <p class="text-sm">Please enter the code we sent to user@example.com.</p>
+                        </div>
+                        <form action="" method="post">
+                            <div class="flex items-center justify-center mx-10">
+                              <input type="text" placeholder="1" maxlength="1" min="1" minlength="1" max="1" required
+                                class="w-12 h-12 border rounded-lg p-4 text-center mx-auto hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 placeholder:font-medium font-bold text-xl text-blue-900">
+                              <input type="text" placeholder="2" maxlength="1" min="1" minlength="1" max="1" required
+                                class="w-12 h-12 border rounded-lg p-4 text-center mx-auto hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 placeholder:font-medium font-bold text-xl text-blue-900">
+                              <input type="text" placeholder="3" maxlength="1" min="1" minlength="1" max="1" required
+                                class="w-12 h-12 border rounded-lg p-4 text-center mx-auto hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 placeholder:font-medium font-bold text-xl text-blue-900">
+                              <input type="text" placeholder="4" maxlength="1" min="1" minlength="1" max="1" required
+                                class="w-12 h-12 border rounded-lg p-4 text-center mx-auto hover:border-blue-200 focus:outline-none focus:ring focus:ring-blue-400 placeholder:font-medium font-bold text-xl text-blue-900">
+                            </div>
+        
+                            <div class="flex justify-center gap-2 ml-3 text-sm py-10">
+                                <a href="Forgetpass.html">
+                                    <button type="submit" class="block w-32 text-sm border border-sky-950 py-2 rounded-2xl hover:-translate-y-1 transition-all duration-500 text-sky-950 font-semibold mb-2">
+                                        back
+                                    </button>
+                                </a>
+                                <a href="newpass.html">
+                                    <button type="submit" class="block w-32 text-sm bg-sky-950 py-2 rounded-2xl hover:-translate-y-1 transition-all duration-500 text-white font-semibold mb-2">
+                                        Send
+                                    </button>
+                                </a>
+                            </div>   
+                          </form>
+                        
+					</div>
+				</div>
+			</div> 
 </body>
-</html>s
+</html>
