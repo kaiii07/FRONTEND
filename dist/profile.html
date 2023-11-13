@@ -13,31 +13,31 @@
 
     <div class="flex flex-col h-screen">
       <!--  start::navbar   -->
-        <nav class="flex bg-white h-14 w-full items-center justify-between mx-auto px-3 py-2">
+        <nav class="flex bg-white h-14 w-full items-center justify-between mx-auto px-3 py-2 border-b border-gray-300">
           <div class="sidebar-header flex items-start justify-start py-3 ml-4">
-              <div class="inline-flex">
-                  <a href="landingpage.html" class="inline-flex flex-row items-center">
-                      <img class="w-10" src="../Images/logo.png" alt="">
-                  </a>
-              </div>            
+                <div class="inline-flex">
+                    <a href="landingpage.html" class="inline-flex flex-row items-center">
+                        <img class="w-10" src="../Images/logo.png" alt="">
+                    </a>
+                </div>
+                <form action="#" class="sm:pl-16 md:pl-5 mt-1">
+                    <div class="hidden md:flex relative">
+                        <input id="search" type="text" name="search" class="text-xs placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-300 w-full h-10 focus:outline-none focus:border-sky-950" placeholder="Search..." />
+                    </div>
+
+                    <!-- hide search box -->
+                    <div class="flex md:hidden">
+                        <a href="#" class="flex items-center justify-center h-10 w-10 border-transparent">
+                            <svg class="h-4 w-4 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </form>                 
           </div>
 
           <!-- button profile -->
           <div class="flex items-center justify-center gap-2">
-            <form action="#" class="sm:pl-">
-                <div class="hidden md:flex relative">
-                    <input id="search" type="text" name="search" class="text-xs placeholder-gray-500 pl-4 pr-4 rounded-full border border-gray-300 w-full h-10 focus:outline-none focus:border-sky-950" placeholder="Search..." />
-                </div>
-
-                <!-- hide search box -->
-                <div class="flex md:hidden">
-                <a href="#" class="flex items-center justify-center h-10 w-10 border-transparent">
-                    <svg class="h-4 w-4 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                </a>
-                </div>
-            </form>
               <a href="profile.html" class="flex flex-row items-center rounded-full p-1 hover:bg-sky-100">
                   <img class="h-8 w-8 bg-gray-200 border rounded-full" src="../Images/kai.jpg" alt="">
                   <span class="flex flex-col ml-2">
@@ -76,18 +76,19 @@
                                                 <div class="w-full lg:w-4/12 px-4 lg:order-1">
                                                     <div class="flex justify-center py-4 lg:pt-1 pt-0 font-semibold ">
                                                         <div class="lg:mr-4 p-3 text-center hover:bg-sky-100 rounded-lg">
-                                                            <a href="">
-                                                                <span class="text-sm block tracking-wide text-black">89</span>
+                                                            <a href="profile.html">
                                                                 <span class="text-gray-600">post</span>
                                                             </a>
                                                         </div>
                                                         <div class="lg:mr-4 p-3 text-center hover:bg-sky-100 rounded-lg">
-                                                            <span class="text-sm block tracking-wide text-black">89</span>
-                                                            <span class="text-gray-600">about</span>
+                                                            <a href="about.html">
+                                                                <span class="text-gray-600">about</span>
+                                                            </a>
                                                         </div>
                                                         <div class="mr-4 p-3 text-center hover:bg-sky-100 rounded-lg">
-                                                            <span class="text-sm block tracking-wide text-black">22</span>
-                                                            <span class="text-gray-600">photos</span>
+                                                            <a href="photos.html">
+                                                                <span class="text-gray-600">photos</span>
+                                                            </a>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -6,8 +6,6 @@ live server type in terminal: npm run dev
 
 
 
-
-
 Accomplishment
     10/16/2023
     - designed for the initial design of the login page.
@@ -28,6 +26,10 @@ Accomplishment
 
     10/31/2023
     - currently focused on enhancing the design of the profile page and I've taken steps to improve its responsiveness.
+
+    11/05 - 07/2023
+    - working on landing page. 
+    - sidebar and navbar
 
 
 

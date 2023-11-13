@@ -1,0 +1,172 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photos</title>
+  <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body class="bg-gray-200">
+
+    <div class="flex flex-col h-screen">
+      <!--  start::navbar   -->
+        <nav class="flex bg-white h-14 w-full items-center justify-between mx-auto px-3 py-2 border-b border-gray-300">
+            <div class="sidebar-header flex items-start justify-start py-3 ml-4">
+                <div class="inline-flex">
+                    <a href="landingpage.html" class="inline-flex flex-row items-center">
+                        <img class="w-10" src="../Images/logo.png" alt="">
+                    </a>
+                </div> 
+                <form action="#" class="sm:pl-16 md:pl-5 mt-1">
+                    <div class="hidden md:flex relative">
+                        <input id="search" type="text" name="search" class="text-xs placeholder-gray-500 pl-4 pr-4 rounded-lg border border-gray-300 w-full h-10 focus:outline-none focus:border-sky-950" placeholder="Search..." />
+                    </div>
+    
+                    <!-- hide search box -->
+                    <div class="flex md:hidden">
+                        <a href="#" class="flex items-center justify-center h-10 w-10 border-transparent">
+                            <svg class="h-4 w-4 text-gray-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </form>    
+            </div>
+
+            <!-- button profile -->
+            <div class="flex items-center justify-center gap-2">
+                <a href="profile.html" class="flex flex-row items-center rounded-full p-1 hover:bg-sky-100">
+                    <img class="h-8 w-8 bg-gray-200 border rounded-full" src="../Images/kai.jpg" alt="">
+                    <span class="flex flex-col ml-2">
+                    <span class="truncate w-20 font-semibold tracking-wide leading-none">imnotky</span>
+                    </span>
+                </a>
+            </div>
+
+        </nav>
+        <!--  end::navbar   -->
+
+        <div class="flex items-center justify-center">
+            <!-- main content -->
+            <div class="md:w-8/12 ">
+                <!-- start: profile header -->
+                <div class="">
+                    <div class="container mx-auto p-6">
+                        <div class="w-full h-[250px]">
+                            <img src="../Images/header.jpg" class="w-full h-full rounded-tl-lg rounded-tr-lg">
+                        </div>
+                        
+                        <div class="relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 rounded-lg -mt-1">
+                            <div class="px-6">
+                                <div class="flex flex-wrap justify-center items-center">
+                                    <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                                        <div class="relative flex flex-col items-center top-4 -mt-28">
+                                            <img src="../Images/kai.jpg" class="w-44 border-4 border-white rounded-full">
+                                            <span class="flex items-center justify-center mb-4 text-xl font-semibold">imnotkey</span>
+                                        </div>
+        
+                                    </div>
+        
+                                    <div class="w-full lg:w-4/12 px-4 lg:order-1">
+                                        <div class="flex justify-center py-4 lg:pt-1 pt-0 font-semibold ">
+                                            <div class="lg:mr-4 p-3 text-center hover:bg-sky-100 rounded-lg">
+                                                <a href="profile.html">
+                                                    <span class="text-gray-600">post</span>
+                                                </a>
+                                            </div>
+                                            <div class="lg:mr-4 p-3 text-center hover:bg-sky-100 rounded-lg">
+                                                <a href="about.html">
+                                                    <span class="text-gray-600">about</span>
+                                                </a>
+                                            </div>
+                                            <div class="mr-4 p-3 text-center hover:bg-sky-100 rounded-lg">
+                                                <a href="photos.html">
+                                                    <span class="text-gray-600">photos</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right">
+                                        <div class="py-6 px-3 -mt-10 sm:mt-0">
+                                            <button class="bg-sky-950 hover:bg-sky-800 active:bg-sky-900 text-white hover:shadow-md shadow text-sm px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150" type="button">
+                                                edit profile
+                                            </button>
+                                        </div> 
+                                    </div>
+                                </div>       
+                            </div>  
+                        </div>
+                    </div>  
+                </div>
+                <!-- end: profile header -->
+
+                <!-- start: about -->
+                <div class="container mx-auto p-6 -mt-12 mb-1">
+                    <form class="bg-white rounded-lg md:w-full mb-5 p-4 px-7 w-full">
+                        <p class="font-semibold text-gray-900 text-lg">
+                            Photos
+                        </p>        
+
+                        <ul class="mt-2 text-gray-700 text-sm">
+                            <li class="flex border-y py-2">
+                                <span class="font-semibold w-24">Name:</span>
+                                <span class="text-gray-700">Ky Davi</span>
+                            </li>
+                            <li class="flex border-b py-2">
+                                <span class="font-semibold w-24">Section:</span>
+                                <span class="text-gray-700">BSCS 3A</span>
+                            </li>
+                            <li class="flex border-b py-2">
+                                <span class="font-semibold w-24">Birthday:</span>
+                                <span class="text-gray-700">Secret, sino kaba</span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="font-semibold w-24">Joined:</span>
+                                <span class="text-gray-700">idk when</span>
+                            </li>                           
+                            </li>
+                        </ul>            
+                    </form>     
+                </div> 
+                <!-- end: about -->
+
+                <!-- start: photos -->
+                <div class="container mx-auto p-6 -mt-12 mb-1">
+                    <form class="bg-white rounded-lg md:w-full mb-2 p-4 px-7 w-full">
+                        <p class="font-semibold text-gray-900 text-lg">
+                            About
+                        </p>        
+
+                        <ul class="mt-2 text-gray-700 text-sm">
+                            <li class="flex border-y py-2">
+                                <span class="font-semibold w-24">Name:</span>
+                                <span class="text-gray-700">Ky Davi</span>
+                            </li>
+                            <li class="flex border-b py-2">
+                                <span class="font-semibold w-24">Section:</span>
+                                <span class="text-gray-700">BSCS 3A</span>
+                            </li>
+                            <li class="flex border-b py-2">
+                                <span class="font-semibold w-24">Birthday:</span>
+                                <span class="text-gray-700">Secret, sino kaba</span>
+                            </li>
+                            <li class="flex py-2">
+                                <span class="font-semibold w-24">Joined:</span>
+                                <span class="text-gray-700">idk when</span>
+                            </li>                           
+                            </li>
+                        </ul>            
+                    </form>     
+                </div> 
+                <!-- end: photos -->
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
